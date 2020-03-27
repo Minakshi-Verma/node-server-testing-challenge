@@ -39,7 +39,7 @@ router.delete('/:id', (req,res)=>{
         res.status(204).json({message:"No data available"})
     })
     .catch(err=>{
-        res.status(500).json(err)
+        res.status(404).json(err)
     })
 })
 

@@ -39,8 +39,8 @@ server.get('/users', (req,res)=>{
   server.delete('/users/:id', (req,res)=>{
       const {id} = req.params
       Users.remove(id)
-      .then(deleted=>{
-          res.status(204).json({message:"No data available"})
+      .then(deleted=>{         
+            res.status(204).json({message:"No data available"})       
       })
       .catch(err=>{
           res.status(500).json(err)
